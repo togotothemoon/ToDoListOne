@@ -1,6 +1,8 @@
-import express from 'express';
+import { connectDB } from './db.js';
+import { PORT } from './routes/config.js';
+import app from './app.js'
 
-const app = express()
+connectDB()
 
-app.listen(4000)
-console.log('Server in running port.', 4000)
+app.listen(PORT)
+console.log('Server in running port.', PORT)
